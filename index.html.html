@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBDDF Swarna Seva Mandalaya | Verified Professional & Skilled Services Directory</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        kandyMaroon: '#7B1113',
+                        kandyGold: '#D4AF37',
+                        kandyDark: '#1E1B18',
+                        kandyCream: '#FAF8F5',
+                        kandyRoyal: '#4A0E0E'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAF8F5;
+            color: #1E1B18;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7B1113;
+            border-radius: 9999px;
+        }
+        .gold-border {
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+        .kandy-gradient {
+            background: linear-gradient(135deg, #4A0E0E 0%, #7B1113 60%, #991B1B 100%);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Top Navigation Bar -->
+    <header class="kandy-gradient text-white shadow-lg sticky top-0 z-40 border-b-2 border-kandyGold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
+            <!-- Brand Title -->
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-2xl bg-kandyGold text-kandyRoyal flex items-center justify-center shadow-md shrink-0">
+                    <!-- Crown / Royal Emblem SVG -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-kandyGold text-kandyRoyal rounded-md">SBDDF</span>
+                        <h1 class="text-lg sm:text-xl font-extrabold tracking-tight text-white">Swarna Seva Mandalaya</h1>
+                    </div>
+                    <p class="text-xs text-amber-200/90 font-medium">Verified Specialists & Skilled Workforce Registry</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-2.5 sm:gap-3">
+                <button onclick="openAddModal()" class="px-4 py-2.5 bg-kandyGold hover:bg-amber-400 text-kandyRoyal font-bold text-xs sm:text-sm rounded-xl shadow transition flex items-center gap-2 cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    <span>Register Service</span>
+                </button>
+                <button onclick="openAdminGate()" class="px-3.5 py-2.5 bg-white/10 hover:bg-white/20 text-white border border-kandyGold/40 font-semibold text-xs sm:text-sm rounded-xl transition flex items-center gap-2 cursor-pointer">
+                    <svg class="w-4 h-4 text-kandyGold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                    </svg>
+                    <span>Admin Panel</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dynamic Hero Banner Slider -->
+    <section class="relative bg-kandyDark text-white overflow-hidden border-b-4 border-kandyGold">
+        <div id="heroSlider" class="relative h-64 sm:h-80 w-full">
+            <!-- Slide content rendered via JS -->
+        </div>
+        <!-- Slider Controls -->
+        <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-kandyMaroon text-white flex items-center justify-center transition cursor-pointer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+        </button>
+        <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-kandyMaroon text-white flex items-center justify-center transition cursor-pointer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+        </button>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+
+        <!-- Search & Granular Location Filter Card -->
+        <div class="bg-white rounded-2xl shadow-md border gold-border p-5 sm:p-6 mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-base sm:text-lg font-bold text-kandyMaroon flex items-center gap-2">
+                    <svg class="w-5 h-5 text-kandyGold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+                    <span>Find Verified Professionals & Skilled Specialists</span>
+                </h2>
+                <button onclick="resetFilters()" class="text-xs font-semibold text-kandyMaroon hover:underline cursor-pointer">Reset All Filters</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-3.5">
+                <!-- Keyword Search -->
+                <div class="xl:col-span-2">
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">Search Name or Specialty</label>
+                    <input type="text" id="searchInput" oninput="filterProviders()" placeholder="Doctor, Lawyer, Mason, Excavator..." class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-kandyMaroon focus:border-kandyMaroon outline-none bg-slate-50">
+                </div>
+
+                <!-- Category Filter -->
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">Service Category</label>
+                    <select id="filterCategory" onchange="handleFilterCategoryChange()" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-kandyMaroon outline-none bg-slate-50">
+                        <option value="All">All Categories</option>
+                    </select>
+                </div>
+
+                <!-- Sub-Category Filter -->
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">Sub-Category</label>
+                    <select id="filterSubCategory" onchange="filterProviders()" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-kandyMaroon outline-none bg-slate-50">
+                        <option value="All">All Sub-Categories</option>
+                    </select>
+                </div>
+
+                <!-- District Filter -->
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">District</label>
+                    <select id="filterDistrict" onchange="filterProviders()" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-kandyMaroon outline-none bg-slate-50">
+                        <option value="All">All Districts</option>
+                        <option value="Colombo">Colombo</option>
+                        <option value="Kandy">Kandy</option>
+                        <option value="Gampaha">Gampaha</option>
+                        <option value="Kurunegala">Kurunegala</option>
+                        <option value="Galle">Galle</option>
+                        <option value="Matara">Matara</option>
+                        <option value="Kalutara">Kalutara</option>
+                        <option value="Anuradhapura">Anuradhapura</option>
+                        <option value="Polonnaruwa">Polonnaruwa</option>
+                        <option value="Badulla">Badulla</option>
+                        <option value="Ratnapura">Ratnapura</option>
+                        <option value="Kegalle">Kegalle</option>
+                        <option value="Matale">Matale</option>
+                        <option value="Nuwara Eliya">Nuwara Eliya</option>
+                        <option value="Jaffna">Jaffna</option>
+                        <option value="Batticaloa">Batticaloa</option>
+                        <option value="Trincomalee">Trincomalee</option>
+                        <option value="Ampara">Ampara</option>
+                        <option value="Hambantota">Hambantota</option>
+                        <option value="Puttalam">Puttalam</option>
+                        <option value="Monaragala">Monaragala</option>
+                        <option value="Vavuniya">Vavuniya</option>
+                        <option value="Mannar">Mannar</option>
+                        <option value="Kilinochchi">Kilinochchi</option>
+                        <option value="Mullaitivu">Mullaitivu</option>
+                    </select>
+                </div>
+
+                <!-- Divisional Secretariat & GN Division Filter -->
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">Div. Sec / GN Division</label>
+                    <input type="text" id="filterLocalArea" oninput="filterProviders()" placeholder="e.g. Gangawata Korale" class="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-kandyMaroon outline-none bg-slate-50">
+                </div>
+            </div>
+
+            <!-- Category Size & Count Pills -->
+            <div id="categoryBadgesContainer" class="mt-4 pt-4 border-t border-slate-100 flex flex-wrap gap-2">
+                <!-- Populated dynamically with category counts -->
+            </div>
+        </div>
+
+        <!-- Results Header -->
+        <div class="flex items-center justify-between mb-5">
+            <h3 class="text-lg font-extrabold text-kandyDark">
+                Registered Specialists <span id="resultsCountBadge" class="ml-2 px-2.5 py-0.5 text-xs font-bold bg-kandyMaroon text-white rounded-full">0</span>
+            </h3>
+            <span class="text-xs text-slate-500 font-medium">Flexible Service Fee & Direct Mutual Agreement</span>
+        </div>
+
+        <!-- Providers Cards Grid -->
+        <div id="providersGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards injected dynamically -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden bg-white rounded-2xl border gold-border p-12 text-center shadow-sm my-6">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-amber-50 text-kandyMaroon flex items-center justify-center">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 16.318A4.486 4.486 0 0012.016 15a4.486 4.486 0 00-3.198 1.318M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+                </svg>
+            </div>
+            <h4 class="text-lg font-bold text-slate-800 mb-1">No Matching Specialists Found</h4>
+            <p class="text-sm text-slate-500 mb-4">Try clearing your local area filter or selecting another category.</p>
+            <button onclick="resetFilters()" class="px-5 py-2.5 bg-kandyMaroon text-white text-sm font-semibold rounded-xl hover:bg-red-900 transition cursor-pointer">Show All Providers</button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-kandyDark text-slate-300 border-t-4 border-kandyGold py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-2 mb-1.5">
+                    <span class="px-2 py-0.5 text-[10px] font-extrabold bg-kandyGold text-kandyRoyal rounded">SBDDF</span>
+                    <span class="font-bold text-white text-base">Swarna Seva Mandalaya</span>
+                </div>
+                <p class="text-xs text-slate-400 max-w-md">Connecting Medical Doctors, Legal Advisors, Entrepreneurs, Technicians & Skilled Field Specialists across Sri Lanka.</p>
+            </div>
+
+            <!-- Official Contact Details -->
+            <div class="flex flex-col sm:flex-row items-center gap-4 text-xs bg-white/5 border border-kandyGold/30 px-5 py-3 rounded-2xl">
+                <a href="tel:0765588622" class="flex items-center gap-2 text-amber-200 hover:text-kandyGold font-bold transition">
+                    <svg class="w-4 h-4 text-kandyGold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                    </svg>
+                    <span>076 5588622</span>
+                </a>
+                <span class="hidden sm:inline text-slate-600">|</span>
+                <div class="flex items-center gap-2 text-slate-200 font-medium">
+                    <svg class="w-4 h-4 text-kandyGold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                    <span>No. 08, Galagedara Bus Stand</span>
+                </div>
+            </div>
+
+            <div class="text-xs text-slate-400 text-center md:text-right">
+                &copy; 2026 SBDDF Swarna Seva Mandalaya.<br class="hidden md:inline"> All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================= -->
+    <!-- MODAL 1: REGISTER NEW SERVICE PROVIDER                    -->
+    <!-- ========================================================= -->
+    <div id="addModal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border-2 border-kandyGold">
+            <div class="kandy-gradient text-white px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+                <div>
+                    <h3 class="text-lg font-extrabold">Register Professional / Skilled Service</h3>
+                    <p class="text-xs text-amber-200">Create your verified public profile on SBDDF Swarna Seva Mandalaya</p>
+                </div>
+                <button onclick="closeAddModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <form onsubmit="handleAddNewProvider(event)" class="p-6 space-y-4">
+                <!-- Name & Title -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Full Name / Organization Name *</label>
+                        <input type="text" id="newName" required placeholder="e.g. Dr. Nuwan Perera / K. Bandara" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50 focus:ring-2 focus:ring-kandyMaroon">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Exact Profession / Designation *</label>
+                        <input type="text" id="newProfession" required placeholder="e.g. Consultant Physician / Earth Excavation Specialist" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50 focus:ring-2 focus:ring-kandyMaroon">
+                    </div>
+                </div>
+
+                <!-- Category & Sub-Category -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Service Category *</label>
+                        <select id="newCategory" required onchange="updateSubCategoryDropdown('newCategory', 'newSubCategory')" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50 focus:ring-2 focus:ring-kandyMaroon"></select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Sub-Category *</label>
+                        <select id="newSubCategory" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50 focus:ring-2 focus:ring-kandyMaroon"></select>
+                    </div>
+                </div>
+
+                <!-- Granular Sri Lanka Location -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">District *</label>
+                        <select id="newDistrict" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                            <option value="Kandy">Kandy</option>
+                            <option value="Colombo">Colombo</option>
+                            <option value="Gampaha">Gampaha</option>
+                            <option value="Kurunegala">Kurunegala</option>
+                            <option value="Galle">Galle</option>
+                            <option value="Matara">Matara</option>
+                            <option value="Kalutara">Kalutara</option>
+                            <option value="Anuradhapura">Anuradhapura</option>
+                            <option value="Polonnaruwa">Polonnaruwa</option>
+                            <option value="Badulla">Badulla</option>
+                            <option value="Ratnapura">Ratnapura</option>
+                            <option value="Kegalle">Kegalle</option>
+                            <option value="Matale">Matale</option>
+                            <option value="Nuwara Eliya">Nuwara Eliya</option>
+                            <option value="Jaffna">Jaffna</option>
+                            <option value="Batticaloa">Batticaloa</option>
+                            <option value="Trincomalee">Trincomalee</option>
+                            <option value="Ampara">Ampara</option>
+                            <option value="Hambantota">Hambantota</option>
+                            <option value="Puttalam">Puttalam</option>
+                            <option value="Monaragala">Monaragala</option>
+                            <option value="Vavuniya">Vavuniya</option>
+                            <option value="Mannar">Mannar</option>
+                            <option value="Kilinochchi">Kilinochchi</option>
+                            <option value="Mullaitivu">Mullaitivu</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Divisional Secretariat *</label>
+                        <input type="text" id="newDivSec" required placeholder="e.g. Gangawata Korale" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Grama Niladhari Division *</label>
+                        <input type="text" id="newGnDiv" required placeholder="e.g. Ampitiya North" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                </div>
+
+                <!-- Phone, WhatsApp & Privacy -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Primary Contact Number *</label>
+                        <input type="tel" id="newPhone" required placeholder="0771234567" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                        <label class="inline-flex items-center gap-2 mt-1.5 cursor-pointer">
+                            <input type="checkbox" id="newHidePhone" class="rounded text-kandyMaroon focus:ring-kandyMaroon">
+                            <span class="text-xs text-slate-600 font-medium">Mask phone number until customer clicks Reveal</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">WhatsApp Number (Direct Chat)</label>
+                        <input type="tel" id="newWhatsapp" placeholder="94771234567" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                </div>
+
+                <!-- Email, YouTube & Social Links -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Email Address</label>
+                        <input type="email" id="newEmail" placeholder="doctor@clinic.lk" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">YouTube Channel URL</label>
+                        <input type="url" id="newYoutube" placeholder="https://youtube.com/@..." class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Other Social / Website URL</label>
+                        <input type="url" id="newSocial" placeholder="https://facebook.com/..." class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                </div>
+
+                <!-- Flexible Payment / Honorarium Preference -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Service Honorarium / Fee Preference *</label>
+                    <select id="newPaymentPref" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                        <option value="Flexible / Client's Voluntary Contribution">Flexible / Client's Voluntary Contribution</option>
+                        <option value="Mutual Discussion & Fair Agreement">Mutual Discussion & Fair Agreement</option>
+                        <option value="Standard Consultation / Task Rate">Standard Consultation / Task Rate</option>
+                        <option value="Pro-Bono / Community Welfare Option Available">Pro-Bono / Community Welfare Option Available</option>
+                    </select>
+                </div>
+
+                <!-- Description -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Qualifications, Experience & Service Overview *</label>
+                    <textarea id="newDescription" rows="3" required placeholder="Describe your expertise, certifications, availability, and service standards..." class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50"></textarea>
+                </div>
+
+                <!-- Main Profile Photo Upload (Mobile & Desktop Friendly) -->
+                <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200">
+                    <label class="block text-xs font-bold text-kandyMaroon mb-1">Main Profile / Identity Photo * (Recommended: 600x600px)</label>
+                    <input type="file" accept="image/*" required onchange="handleFileSelected(this, 'newMainPhotoPreview', 'newMainPhotoBase64')" class="w-full text-xs text-slate-600 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-kandyMaroon file:text-white hover:file:bg-red-900 cursor-pointer">
+                    <input type="hidden" id="newMainPhotoBase64">
+                    <div id="newMainPhotoPreview" class="hidden mt-3">
+                        <img src="" alt="Preview" class="w-24 h-24 object-cover rounded-xl border-2 border-kandyGold shadow">
+                    </div>
+                </div>
+
+                <!-- 4 Sub-Photos Upload -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-2">Work / Service Portfolio Photos (Max 4 Images)</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="p-2.5 border rounded-xl bg-slate-50">
+                            <span class="block text-[11px] font-semibold text-slate-500 mb-1">Sub Photo 1</span>
+                            <input type="file" accept="image/*" onchange="handleSubPhotoSelected(this, 0, 'new')" class="w-full text-xs file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-slate-700 file:text-white cursor-pointer">
+                        </div>
+                        <div class="p-2.5 border rounded-xl bg-slate-50">
+                            <span class="block text-[11px] font-semibold text-slate-500 mb-1">Sub Photo 2</span>
+                            <input type="file" accept="image/*" onchange="handleSubPhotoSelected(this, 1, 'new')" class="w-full text-xs file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-slate-700 file:text-white cursor-pointer">
+                        </div>
+                        <div class="p-2.5 border rounded-xl bg-slate-50">
+                            <span class="block text-[11px] font-semibold text-slate-500 mb-1">Sub Photo 3</span>
+                            <input type="file" accept="image/*" onchange="handleSubPhotoSelected(this, 2, 'new')" class="w-full text-xs file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-slate-700 file:text-white cursor-pointer">
+                        </div>
+                        <div class="p-2.5 border rounded-xl bg-slate-50">
+                            <span class="block text-[11px] font-semibold text-slate-500 mb-1">Sub Photo 4</span>
+                            <input type="file" accept="image/*" onchange="handleSubPhotoSelected(this, 3, 'new')" class="w-full text-xs file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-slate-700 file:text-white cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Upload (Mobile/Desktop File) OR URL -->
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Service Showcase Video (Upload Video File OR Paste YouTube URL)</label>
+                    <div class="space-y-2">
+                        <input type="file" id="newVideoFile" accept="video/mp4,video/webm,video/ogg" onchange="handleVideoFileSelected(this, 'new')" class="w-full text-xs file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-kandyMaroon file:text-white hover:file:bg-red-900 cursor-pointer">
+                        <input type="hidden" id="newVideoBase64">
+                        <div class="text-[11px] font-bold text-slate-400 text-center">- OR -</div>
+                        <input type="url" id="newVideoUrl" placeholder="https://www.youtube.com/watch?v=..." class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-white focus:ring-2 focus:ring-kandyMaroon">
+                    </div>
+                    <p class="text-[10px] text-slate-500 mt-1">Upload an MP4/WebM video directly from your phone or enter a YouTube link.</p>
+                </div>
+
+                <!-- Submit Buttons -->
+                <div class="pt-4 flex gap-3">
+                    <button type="button" onclick="closeAddModal()" class="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm rounded-xl transition cursor-pointer">Cancel</button>
+                    <button type="submit" class="flex-1 py-3 bg-kandyMaroon hover:bg-red-900 text-white font-bold text-sm rounded-xl shadow-lg transition cursor-pointer">Publish Profile</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- MODAL 2: ADMIN LOGIN GATE                                 -->
+    <!-- ========================================================= -->
+    <div id="adminLoginModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border-2 border-kandyGold">
+            <div class="text-center mb-5">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-2xl bg-kandyMaroon text-kandyGold flex items-center justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-extrabold text-kandyDark">SBDDF Administrator Access</h3>
+                <p class="text-xs text-slate-500 mt-1">Enter authorized security passcode to manage directory profiles, categories, and banners.</p>
+            </div>
+            <form onsubmit="verifyAdminPasscode(event)" class="space-y-4">
+                <div>
+                    <input type="password" id="adminPasscodeInput" required placeholder="Enter Admin Passcode" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-center text-sm font-bold tracking-widest focus:ring-2 focus:ring-kandyMaroon outline-none">
+                </div>
+                <div class="flex gap-3">
+                    <button type="button" onclick="closeAdminLoginModal()" class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm rounded-xl cursor-pointer">Cancel</button>
+                    <button type="submit" class="flex-1 py-2.5 bg-kandyMaroon hover:bg-red-900 text-white font-bold text-sm rounded-xl cursor-pointer">Unlock Panel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- MODAL 3: ADMINISTRATOR CONTROL PANEL                      -->
+    <!-- ========================================================= -->
+    <div id="adminModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border-2 border-kandyGold">
+            <!-- Admin Header -->
+            <div class="kandy-gradient text-white px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+                <div class="flex items-center gap-2.5">
+                    <span class="px-2 py-0.5 text-[10px] font-extrabold bg-kandyGold text-kandyRoyal rounded">SBDDF ADMIN</span>
+                    <h3 class="text-lg font-extrabold">Swarna Seva Mandalaya Control Center</h3>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="logoutAdmin()" class="px-3 py-1.5 bg-red-950/60 hover:bg-red-950 text-amber-200 text-xs font-bold rounded-lg cursor-pointer">Lock Session</button>
+                    <button onclick="closeAdminModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admin Navigation Tabs -->
+            <div class="bg-slate-100 px-6 py-2.5 border-b flex flex-wrap gap-2">
+                <button onclick="switchAdminTab('profiles')" id="tabBtnProfiles" class="px-4 py-2 rounded-xl text-xs font-bold bg-kandyMaroon text-white cursor-pointer">Manage Profiles</button>
+                <button onclick="switchAdminTab('categories')" id="tabBtnCategories" class="px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 cursor-pointer">Categories & Sub-Categories</button>
+                <button onclick="switchAdminTab('slides')" id="tabBtnSlides" class="px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 cursor-pointer">Hero Banner Slides</button>
+            </div>
+
+            <!-- Tab 1: Manage Profiles -->
+            <div id="adminTabProfiles" class="p-6">
+                <div class="mb-4 flex items-center justify-between">
+                    <h4 class="text-base font-bold text-slate-800">Registered Service Providers</h4>
+                    <span class="text-xs text-slate-500">Edit details, update media, or remove entries</span>
+                </div>
+                <div id="adminProvidersList" class="space-y-3">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+
+            <!-- Tab 2: Manage Categories & Sub-Categories -->
+            <div id="adminTabCategories" class="hidden p-6 space-y-6">
+                <div class="bg-amber-50/70 p-4 rounded-2xl border border-amber-200">
+                    <h4 class="text-sm font-extrabold text-kandyMaroon mb-3">Add New Category or Sub-Category</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <input type="text" id="adminNewCatName" placeholder="Category Name (e.g. Agriculture)" class="px-3.5 py-2.5 border rounded-xl text-sm bg-white">
+                        <input type="text" id="adminNewSubCatName" placeholder="Sub-Category (e.g. Organic Farming)" class="px-3.5 py-2.5 border rounded-xl text-sm bg-white">
+                        <button onclick="adminAddCategory()" class="px-4 py-2.5 bg-kandyMaroon hover:bg-red-900 text-white font-bold text-sm rounded-xl cursor-pointer">Add / Append</button>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-slate-800 mb-3">Existing Categories & Sub-Categories</h4>
+                    <div id="adminCategoriesList" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Rendered via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Manage Hero Slides -->
+            <div id="adminTabSlides" class="hidden p-6 space-y-6">
+                <div class="bg-amber-50/70 p-4 rounded-2xl border border-amber-200">
+                    <h4 class="text-sm font-extrabold text-kandyMaroon mb-3">Add New Hero Banner Slide</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+                        <input type="text" id="slideTitleInput" placeholder="Slide Headline" class="px-3.5 py-2.5 border rounded-xl text-sm bg-white">
+                        <input type="text" id="slideSubtitleInput" placeholder="Slide Subtitle / Description" class="px-3.5 py-2.5 border rounded-xl text-sm bg-white">
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 items-center">
+                        <input type="file" accept="image/*" onchange="handleSlideImageUpload(this)" class="w-full text-xs file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:font-bold file:bg-slate-800 file:text-white cursor-pointer">
+                        <input type="hidden" id="slideImageBase64">
+                        <button onclick="adminAddSlide()" class="w-full sm:w-auto px-6 py-2.5 bg-kandyMaroon hover:bg-red-900 text-white font-bold text-sm rounded-xl shrink-0 cursor-pointer">Add Slide</button>
+                    </div>
+                </div>
+                <div id="adminSlidesList" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- MODAL 4: EDIT PROVIDER (ADMIN ONLY)                       -->
+    <!-- ========================================================= -->
+    <div id="editModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border-2 border-kandyGold">
+            <div class="kandy-gradient text-white px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+                <h3 class="text-lg font-extrabold">Edit Service Provider Profile</h3>
+                <button onclick="closeEditModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <form onsubmit="handleSaveEditedProvider(event)" class="p-6 space-y-4">
+                <input type="hidden" id="editId">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Full Name *</label>
+                        <input type="text" id="editName" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Profession / Specialty *</label>
+                        <input type="text" id="editProfession" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Category *</label>
+                        <select id="editCategory" onchange="updateSubCategoryDropdown('editCategory', 'editSubCategory')" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50"></select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Sub-Category *</label>
+                        <select id="editSubCategory" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50"></select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">District *</label>
+                        <input type="text" id="editDistrict" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Divisional Secretariat *</label>
+                        <input type="text" id="editDivSec" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Grama Niladhari Division *</label>
+                        <input type="text" id="editGnDiv" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Phone Number *</label>
+                        <input type="tel" id="editPhone" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                        <label class="inline-flex items-center gap-2 mt-1.5 cursor-pointer">
+                            <input type="checkbox" id="editHidePhone" class="rounded text-kandyMaroon">
+                            <span class="text-xs text-slate-600">Hide phone number until revealed</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">WhatsApp Number</label>
+                        <input type="tel" id="editWhatsapp" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Email Address</label>
+                        <input type="email" id="editEmail" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">YouTube Channel</label>
+                        <input type="url" id="editYoutube" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Social / Web Link</label>
+                        <input type="url" id="editSocial" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Service Honorarium / Fee Preference</label>
+                    <input type="text" id="editPaymentPref" class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Description *</label>
+                    <textarea id="editDescription" rows="3" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm bg-slate-50"></textarea>
+                </div>
+
+                <!-- Edit Main Photo -->
+                <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200">
+                    <label class="block text-xs font-bold text-kandyMaroon mb-1">Update Main Profile Photo</label>
+                    <input type="file" accept="image/*" onchange="handleFileSelected(this, 'editMainPhotoPreview', 'editMainPhotoBase64')" class="w-full text-xs">
+                    <input type="hidden" id="editMainPhotoBase64">
+                    <div id="editMainPhotoPreview" class="mt-2">
+                        <img src="" alt="Preview" class="w-20 h-20 object-cover rounded-xl border">
+                    </div>
+                </div>
+
+                <!-- Edit 4 Sub Photos -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Update Sub Photos (Max 4)</label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <input type="file" accept="image/*" onchange="handleSubPhotoSelected(this, 0, 'edit')" class="text-xs border p-2 rounded-lg">
+                        <input type="file" accept="image/*" onchange="handleSubPhotoSelected(this, 1, 'edit')" class="text-xs border p-2 rounded-lg">
+                        <input type="file" accept="image/*" onchange="handleSubPhotoSelected(this, 2, 'edit')" class="text-xs border p-2 rounded-lg">
+                        <input type="file" accept="image/*" onchange="handleSubPhotoSelected(this, 3, 'edit')" class="text-xs border p-2 rounded-lg">
+                    </div>
+                </div>
+
+                <!-- Edit Video Upload or URL -->
+                <div class="p-3 rounded-xl bg-slate-50 border">
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Update Showcase Video File or URL</label>
+                    <input type="file" id="editVideoFile" accept="video/mp4,video/webm,video/ogg" onchange="handleVideoFileSelected(this, 'edit')" class="w-full text-xs mb-2">
+                    <input type="hidden" id="editVideoBase64">
+                    <input type="url" id="editVideoUrl" placeholder="https://www.youtube.com/watch?v=..." class="w-full px-3 py-2 border rounded-xl text-sm bg-white">
+                </div>
+
+                <div class="pt-4 flex gap-3">
+                    <button type="button" onclick="closeEditModal()" class="flex-1 py-3 bg-slate-100 text-slate-700 font-bold text-sm rounded-xl cursor-pointer">Cancel</button>
+                    <button type="submit" class="flex-1 py-3 bg-kandyMaroon text-white font-bold text-sm rounded-xl shadow cursor-pointer">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- MODAL 5: MEDIA GALLERY POPUP (PHOTOS & VIDEO)             -->
+    <!-- ========================================================= -->
+    <div id="photoModal" class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl border-2 border-kandyGold">
+            <div class="flex items-center justify-between mb-4 pb-3 border-b">
+                <h3 class="text-lg font-extrabold text-kandyMaroon">Work Portfolio & Showcase Media</h3>
+                <button onclick="closePhotoModal()" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div id="photoModalGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Media rendered via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="hidden fixed bottom-5 right-5 z-50 bg-kandyDark text-white px-5 py-3 rounded-2xl shadow-xl border border-kandyGold text-sm font-semibold flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-kandyGold"></span>
+        <span id="toastMessage">Action completed</span>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- JAVASCRIPT LOGIC                                          -->
+    <!-- ========================================================= -->
+    <script>
+        // 1. Dynamic Categories & Sub-Categories
+        let categoriesData = {
+            "Medical & Healthcare": ["Consultant Specialist", "General Physician", "Dental Surgeon", "Ayurvedic Physician", "Physiotherapist", "Nursing Care"],
+            "Legal & Advisory": ["Attorney-at-Law", "Notary Public", "Corporate Legal Advisor", "Land & Property Law", "Tax & Audit Consultant"],
+            "Business & Entrepreneurship": ["Business Consultant", "Financial Planner", "Import & Export", "IT & Software Solutions", "Real Estate"],
+            "Engineering & Construction": ["Civil Engineer", "Architect", "Master Mason", "Electrical Specialist", "Plumbing Technician", "Carpentry & Woodwork"],
+            "Field & Earthworks Specialists": ["Land Excavation & Earthworks", "Well Digging Specialist", "Agricultural Land Clearing", "Heavy Machinery Operator", "Landscaping & Gardening"],
+            "Automotive & Mechanical": ["Automobile Engineer", "Hybrid & EV Technician", "Heavy Vehicle Mechanic", "Auto Electrical"]
+        };
+
+        // 2. Hero Slides Data
+        let heroSlides = [
+            {
+                title: "SBDDF Swarna Seva Mandalaya",
+                subtitle: "Sri Lanka's Premier Registry Uniting Medical Consultants, Legal Experts, Entrepreneurs & Skilled Field Specialists.",
+                image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80"
+            },
+            {
+                title: "Dignified Recognition for Every Profession",
+                subtitle: "From Specialist Physicians to Dedicated Earthworks & Construction Craftsmen — Connect Directly Across Every District & GN Division.",
+                image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80"
+            }
+        ];
+        let currentSlideIndex = 0;
+
+        // 3. Initial Verified Providers Data
+        let providers = [
+            {
+                id: 101,
+                name: "Dr. Samantha Rajapaksha",
+                category: "Medical & Healthcare",
+                subCategory: "Consultant Specialist",
+                profession: "Senior Consultant Physician (MBBS, MD)",
+                district: "Kandy",
+                divSec: "Gangawata Korale",
+                gnDivision: "Ampitiya North",
+                phone: "0771234567",
+                whatsapp: "94771234567",
+                email: "dr.rajapaksha@medicare.lk",
+                youtube: "https://youtube.com",
+                socialLink: "https://linkedin.com",
+                videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                hidePhone: true,
+                paymentPref: "Flexible / Client's Voluntary Contribution",
+                rating: 4.9,
+                reviewsCount: 42,
+                verified: true,
+                description: "Over 15 years of clinical experience in internal medicine and preventive healthcare. Community welfare consultations available.",
+                mainPhoto: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80",
+                subPhotos: [
+                    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=600&q=80"
+                ]
+            },
+            {
+                id: 102,
+                name: "Atty. Kasun Jayawardena",
+                category: "Legal & Advisory",
+                subCategory: "Attorney-at-Law",
+                profession: "Attorney-at-Law & Notary Public (LL.B)",
+                district: "Colombo",
+                divSec: "Thimbirigasyaya",
+                gnDivision: "Narahenpita",
+                phone: "0719876543",
+                whatsapp: "94719876543",
+                email: "kasun.law@chambers.lk",
+                youtube: "",
+                socialLink: "https://linkedin.com",
+                videoUrl: "",
+                hidePhone: false,
+                paymentPref: "Mutual Discussion & Fair Agreement",
+                rating: 4.8,
+                reviewsCount: 29,
+                verified: true,
+                description: "Specializing in property deeds, civil litigation, company registration, and legal documentation across Sri Lanka.",
+                mainPhoto: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80",
+                subPhotos: [
+                    "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80"
+                ]
+            },
+            {
+                id: 103,
+                name: "W. M. Bandara Herath",
+                category: "Field & Earthworks Specialists",
+                subCategory: "Land Excavation & Earthworks",
+                profession: "Master Earthworks & Foundation Excavation Specialist",
+                district: "Kurunegala",
+                divSec: "Mallawapitiya",
+                gnDivision: "Thorayaya",
+                phone: "0765544332",
+                whatsapp: "94765544332",
+                email: "",
+                youtube: "",
+                socialLink: "",
+                videoUrl: "",
+                hidePhone: false,
+                paymentPref: "Flexible / Client's Voluntary Contribution",
+                rating: 5.0,
+                reviewsCount: 37,
+                verified: true,
+                description: "20+ years of dedicated expertise in manual and precision land excavation, foundation trenching, agricultural soil preparation, and deep well earthworks.",
+                mainPhoto: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80",
+                subPhotos: [
+                    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&w=600&q=80"
+                ]
+            }
+        ];
+
+        let tempNewSubPhotos = ["", "", "", ""];
+        let tempEditSubPhotos = ["", "", "", ""];
+        let isAdminLoggedIn = false;
+        const ADMIN_PASSCODE = "admin123";
+
+        // =========================================================
+        // HERO SLIDER FUNCTIONS
+        // =========================================================
+        function renderHeroSlider() {
+            const container = document.getElementById('heroSlider');
+            if (!heroSlides.length) return;
+            const slide = heroSlides[currentSlideIndex];
+            container.innerHTML = `
+                <img src="${slide.image}" onerror="this.src='https://placehold.co/1400x400/4A0E0E/D4AF37?text=SBDDF+Swarna+Seva+Mandalaya'" class="w-full h-full object-cover opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-r from-kandyDark/95 via-kandyRoyal/75 to-transparent flex items-center">
+                    <div class="max-w-7xl mx-auto px-6 sm:px-10 w-full">
+                        <span class="inline-block px-3 py-1 mb-3 text-xs font-extrabold uppercase tracking-wider bg-kandyGold text-kandyRoyal rounded-full shadow">
+                            SBDDF Verified Network
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white max-w-2xl leading-tight mb-2">${slide.title}</h2>
+                        <p class="text-xs sm:text-base text-amber-100/90 max-w-xl leading-relaxed">${slide.subtitle}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % heroSlides.length;
+            renderHeroSlider();
+        }
+
+        function prevSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + heroSlides.length) % heroSlides.length;
+            renderHeroSlider();
+        }
+
+        // =========================================================
+        // CATEGORY & DROPDOWN MANAGEMENT
+        // =========================================================
+        function populateCategoryDropdowns() {
+            const filterCat = document.getElementById('filterCategory');
+            const newCat = document.getElementById('newCategory');
+            const editCat = document.getElementById('editCategory');
+
+            const catKeys = Object.keys(categoriesData);
+
+            // Filter dropdown
+            filterCat.innerHTML = `<option value="All">All Categories</option>` +
+                catKeys.map(c => `<option value="${c}">${c}</option>`).join('');
+
+            // Registration & Edit dropdowns
+            const optionsHtml = catKeys.map(c => `<option value="${c}">${c}</option>`).join('');
+            newCat.innerHTML = optionsHtml;
+            editCat.innerHTML = optionsHtml;
+
+            updateSubCategoryDropdown('newCategory', 'newSubCategory');
+            updateSubCategoryDropdown('editCategory', 'editSubCategory');
+            renderCategoryBadges();
+        }
+
+        function handleFilterCategoryChange() {
+            const selectedCat = document.getElementById('filterCategory').value;
+            const subSelect = document.getElementById('filterSubCategory');
+            if (selectedCat === 'All') {
+                subSelect.innerHTML = `<option value="All">All Sub-Categories</option>`;
+            } else {
+                const subs = categoriesData[selectedCat] || [];
+                subSelect.innerHTML = `<option value="All">All Sub-Categories</option>` +
+                    subs.map(s => `<option value="${s}">${s}</option>`).join('');
+            }
+            filterProviders();
+        }
+
+        function updateSubCategoryDropdown(catElemId, subElemId) {
+            const selectedCat = document.getElementById(catElemId).value;
+            const subSelect = document.getElementById(subElemId);
+            const subs = categoriesData[selectedCat] || [];
+            subSelect.innerHTML = subs.map(s => `<option value="${s}">${s}</option>`).join('');
+        }
+
+        function renderCategoryBadges() {
+            const container = document.getElementById('categoryBadgesContainer');
+            const catKeys = Object.keys(categoriesData);
+            container.innerHTML = catKeys.map(cat => {
+                const count = providers.filter(p => p.category === cat).length;
+                return `
+                    <button onclick="quickSelectCategory('${cat}')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-amber-300/70 bg-amber-50/70 hover:bg-kandyMaroon hover:text-white text-kandyRoyal transition flex items-center gap-1.5 cursor-pointer">
+                        <span>${cat}</span>
+                        <span class="px-1.5 py-0.2 bg-kandyGold text-kandyRoyal rounded-md text-[10px] font-extrabold">${count}</span>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function quickSelectCategory(cat) {
+            document.getElementById('filterCategory').value = cat;
+            handleFilterCategoryChange();
+        }
+
+        // =========================================================
+        // FILTERING & RENDERING PROVIDER CARDS
+        // =========================================================
+        function filterProviders() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const cat = document.getElementById('filterCategory').value;
+            const subCat = document.getElementById('filterSubCategory').value;
+            const district = document.getElementById('filterDistrict').value;
+            const localArea = document.getElementById('filterLocalArea').value.toLowerCase().trim();
+
+            const filtered = providers.filter(p => {
+                const matchesQuery = !query ||
+                    p.name.toLowerCase().includes(query) ||
+                    p.profession.toLowerCase().includes(query) ||
+                    p.description.toLowerCase().includes(query);
+                const matchesCat = cat === 'All' || p.category === cat;
+                const matchesSubCat = subCat === 'All' || p.subCategory === subCat;
+                const matchesDistrict = district === 'All' || p.district === district;
+                const matchesLocal = !localArea ||
+                    (p.divSec && p.divSec.toLowerCase().includes(localArea)) ||
+                    (p.gnDivision && p.gnDivision.toLowerCase().includes(localArea));
+
+                return matchesQuery && matchesCat && matchesSubCat && matchesDistrict && matchesLocal;
+            });
+
+            renderProviders(filtered);
+            renderCategoryBadges();
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('filterCategory').value = 'All';
+            document.getElementById('filterSubCategory').innerHTML = `<option value="All">All Sub-Categories</option>`;
+            document.getElementById('filterDistrict').value = 'All';
+            document.getElementById('filterLocalArea').value = '';
+            filterProviders();
+        }
+
+        function renderProviders(list) {
+            const grid = document.getElementById('providersGrid');
+            const empty = document.getElementById('emptyState');
+            const badge = document.getElementById('resultsCountBadge');
+
+            badge.textContent = list.length;
+
+            if (list.length === 0) {
+                grid.innerHTML = '';
+                empty.classList.remove('hidden');
+                return;
+            }
+
+            empty.classList.add('hidden');
+            grid.innerHTML = list.map(p => {
+                const maskedPhone = p.phone.slice(0, 3) + ' ••• ••' + p.phone.slice(-2);
+                const hasMedia = (p.subPhotos && p.subPhotos.length > 0) || p.videoUrl;
+
+                return `
+                <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition border gold-border overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <!-- Top Image & Category Banner -->
+                        <div class="relative h-48 bg-slate-200">
+                            <img src="${p.mainPhoto}" onerror="this.src='https://placehold.co/600x400/7B1113/FFFFFF?text=Verified+Specialist'" alt="${p.name}" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-kandyMaroon text-white shadow">${p.category}</span>
+                            </div>
+                            ${p.verified ? `
+                            <div class="absolute top-3 right-3 bg-white/95 text-kandyRoyal px-2.5 py-1 rounded-full text-[11px] font-extrabold shadow flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                                <span>Verified</span>
+                            </div>` : ''}
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-5">
+                            <div class="text-xs font-bold text-kandyMaroon mb-0.5">${p.subCategory}</div>
+                            <h4 class="text-lg font-extrabold text-kandyDark leading-snug">${p.name}</h4>
+                            <p class="text-xs font-semibold text-slate-600 mb-3">${p.profession}</p>
+
+                            <!-- Granular Location Pill -->
+                            <div class="p-2.5 rounded-xl bg-amber-50/80 border border-amber-200/80 text-xs text-slate-700 mb-3 space-y-1">
+                                <div class="flex items-center gap-1.5 font-bold text-kandyRoyal">
+                                    <svg class="w-3.5 h-3.5 text-kandyMaroon shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+                                    <span>${p.district} District</span>
+                                </div>
+                                <div class="text-[11px] text-slate-600 pl-5">
+                                    Div. Sec: <span class="font-semibold">${p.divSec}</span> &bull; GN: <span class="font-semibold">${p.gnDivision}</span>
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed mb-3">${p.description}</p>
+
+                            <!-- Flexible Fee Tag -->
+                            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px] font-bold mb-3">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span>${p.paymentPref}</span>
+                            </div>
+
+                            <!-- Social Links Row -->
+                            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100">
+                                ${p.email ? `<a href="mailto:${p.email}" class="text-[11px] font-semibold text-slate-600 hover:text-kandyMaroon bg-slate-100 px-2.5 py-1 rounded-lg">Email</a>` : ''}
+                                ${p.youtube ? `<a href="${p.youtube}" target="_blank" class="text-[11px] font-semibold text-red-700 hover:bg-red-100 bg-red-50 px-2.5 py-1 rounded-lg">YouTube</a>` : ''}
+                                ${p.socialLink ? `<a href="${p.socialLink}" target="_blank" class="text-[11px] font-semibold text-blue-700 hover:bg-blue-100 bg-blue-50 px-2.5 py-1 rounded-lg">Social Profile</a>` : ''}
+                                ${hasMedia ? `
+                                    <button onclick='openPhotoModal(${JSON.stringify(p.subPhotos || [])}, ${JSON.stringify(p.videoUrl || "")})' class="ml-auto text-[11px] font-bold text-kandyMaroon hover:underline flex items-center gap-1 cursor-pointer">
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                                        <span>Work Media (${(p.subPhotos ? p.subPhotos.length : 0) + (p.videoUrl ? 1 : 0)})</span>
+                                    </button>
+                                ` : ''}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer: Phone Masking & WhatsApp Action -->
+                    <div class="px-5 py-3.5 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2">
+                        <div class="flex items-center gap-2">
+                            ${p.hidePhone ? `
+                                <span id="phone-display-${p.id}" class="text-xs font-bold text-slate-700">${maskedPhone}</span>
+                                <button id="reveal-btn-${p.id}" onclick="revealPhone(${p.id}, '${p.phone}')" class="px-2.5 py-1 bg-kandyGold/30 hover:bg-kandyGold text-kandyRoyal text-[11px] font-extrabold rounded-lg transition cursor-pointer">Reveal</button>
+                            ` : `
+                                <a href="tel:${p.phone}" class="text-xs font-extrabold text-kandyDark hover:text-kandyMaroon flex items-center gap-1">
+                                    <svg class="w-3.5 h-3.5 text-kandyMaroon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+                                    <span>${p.phone}</span>
+                                </a>
+                            `}
+                        </div>
+
+                        ${p.whatsapp ? `
+                            <a href="https://wa.me/${p.whatsapp.replace(/[^0-9]/g, '')}" target="_blank" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-sm transition flex items-center gap-1.5">
+                                <span>WhatsApp</span>
+                            </a>
+                        ` : ''}
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        function revealPhone(id, actualPhone) {
+            const span = document.getElementById(`phone-display-${id}`);
+            const btn = document.getElementById(`reveal-btn-${id}`);
+            if (span) {
+                span.innerHTML = `<a href="tel:${actualPhone}" class="text-kandyMaroon underline">${actualPhone}</a>`;
+            }
+            if (btn) btn.remove();
+        }
+
+        // =========================================================
+        // FILE UPLOAD HANDLERS (MOBILE & DESKTOP BASE64)
+        // =========================================================
+        function handleFileSelected(inputElement, previewId, hiddenInputId) {
+            const file = inputElement.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById(hiddenInputId).value = e.target.result;
+                    const previewContainer = document.getElementById(previewId);
+                    if (previewContainer) {
+                        previewContainer.classList.remove('hidden');
+                        previewContainer.querySelector('img').src = e.target.result;
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function handleSubPhotoSelected(inputElement, index, mode) {
+            const file = inputElement.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    if (mode === 'new') {
+                        tempNewSubPhotos[index] = e.target.result;
+                    } else {
+                        tempEditSubPhotos[index] = e.target.result;
+                    }
+                    showToast(`Sub-photo ${index + 1} attached!`);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function handleVideoFileSelected(inputElement, mode) {
+            const file = inputElement.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    if (mode === 'new') {
+                        document.getElementById('newVideoBase64').value = e.target.result;
+                        document.getElementById('newVideoUrl').value = '';
+                    } else {
+                        document.getElementById('editVideoBase64').value = e.target.result;
+                        document.getElementById('editVideoUrl').value = '';
+                    }
+                    showToast("Video file attached successfully!");
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // =========================================================
+        // ADD NEW PROVIDER MODAL & SUBMISSION
+        // =========================================================
+        function openAddModal() {
+            populateCategoryDropdowns();
+            tempNewSubPhotos = ["", "", "", ""];
+            document.getElementById('newMainPhotoBase64').value = "";
+            document.getElementById('newMainPhotoPreview').classList.add('hidden');
+            document.getElementById('newVideoBase64').value = "";
+            document.getElementById('addModal').classList.remove('hidden');
+        }
+
+        function closeAddModal() {
+            document.getElementById('addModal').classList.add('hidden');
+        }
+
+        function handleAddNewProvider(event) {
+            event.preventDefault();
+            const mainPhotoBase64 = document.getElementById('newMainPhotoBase64').value;
+            if (!mainPhotoBase64) {
+                showToast("Please upload a main profile photo.");
+                return;
+            }
+
+            const finalVideoSource = document.getElementById('newVideoBase64').value || document.getElementById('newVideoUrl').value.trim();
+
+            const newEntry = {
+                id: Date.now(),
+                name: document.getElementById('newName').value,
+                category: document.getElementById('newCategory').value,
+                subCategory: document.getElementById('newSubCategory').value,
+                profession: document.getElementById('newProfession').value,
+                district: document.getElementById('newDistrict').value,
+                divSec: document.getElementById('newDivSec').value,
+                gnDivision: document.getElementById('newGnDiv').value,
+                phone: document.getElementById('newPhone').value,
+                whatsapp: document.getElementById('newWhatsapp').value.trim(),
+                email: document.getElementById('newEmail').value.trim(),
+                youtube: document.getElementById('newYoutube').value.trim(),
+                socialLink: document.getElementById('newSocial').value.trim(),
+                videoUrl: finalVideoSource,
+                hidePhone: document.getElementById('newHidePhone').checked,
+                paymentPref: document.getElementById('newPaymentPref').value,
+                rating: 5.0,
+                reviewsCount: 1,
+                verified: true,
+                description: document.getElementById('newDescription').value,
+                mainPhoto: mainPhotoBase64,
+                subPhotos: tempNewSubPhotos.filter(p => p !== "")
+            };
+
+            providers.unshift(newEntry);
+            event.target.reset();
+            tempNewSubPhotos = ["", "", "", ""];
+            filterProviders();
+            closeAddModal();
+            showToast("Service profile published successfully!");
+        }
+
+        // =========================================================
+        // MEDIA GALLERY MODAL (PHOTOS + VIDEO)
+        // =========================================================
+        function openPhotoModal(photos, videoUrl) {
+            const modal = document.getElementById('photoModal');
+            const grid = document.getElementById('photoModalGrid');
+            grid.innerHTML = '';
+
+            if (videoUrl) {
+                if (videoUrl.startsWith('data:video/')) {
+                    grid.innerHTML += `
+                        <div class="rounded-2xl overflow-hidden border bg-black shadow aspect-video md:col-span-2">
+                            <video src="${videoUrl}" controls class="w-full h-full"></video>
+                        </div>
+                    `;
+                } else {
+                    let embedUrl = videoUrl;
+                    if (videoUrl.includes('watch?v=')) {
+                        embedUrl = videoUrl.replace('watch?v=', 'embed/');
+                    } else if (videoUrl.includes('youtu.be/')) {
+                        embedUrl = videoUrl.replace('youtu.be/', 'www.youtube.com/embed/');
+                    }
+                    grid.innerHTML += `
+                        <div class="rounded-2xl overflow-hidden border bg-black shadow aspect-video md:col-span-2">
+                            <iframe src="${embedUrl}" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    `;
+                }
+            }
+
+            if (photos && photos.length > 0) {
+                photos.forEach(photo => {
+                    grid.innerHTML += `
+                        <div class="rounded-2xl overflow-hidden border bg-slate-50 shadow">
+                            <img src="${photo}" class="w-full h-64 object-cover">
+                        </div>
+                    `;
+                });
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        function closePhotoModal() {
+            document.getElementById('photoModalGrid').innerHTML = '';
+            document.getElementById('photoModal').classList.add('hidden');
+        }
+
+        // =========================================================
+        // ADMIN LOGIN & PANEL CONTROLS
+        // =========================================================
+        function openAdminGate() {
+            if (isAdminLoggedIn) {
+                openAdminModal();
+            } else {
+                document.getElementById('adminPasscodeInput').value = '';
+                document.getElementById('adminLoginModal').classList.remove('hidden');
+            }
+        }
+
+        function closeAdminLoginModal() {
+            document.getElementById('adminLoginModal').classList.add('hidden');
+        }
+
+        function verifyAdminPasscode(event) {
+            event.preventDefault();
+            const input = document.getElementById('adminPasscodeInput').value;
+            if (input === ADMIN_PASSCODE) {
+                isAdminLoggedIn = true;
+                closeAdminLoginModal();
+                openAdminModal();
+                showToast("Administrator session unlocked.");
+            } else {
+                showToast("Invalid administrator passcode.");
+            }
+        }
+
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            closeAdminModal();
+            showToast("Administrator session locked.");
+        }
+
+        function openAdminModal() {
+            renderAdminList();
+            renderAdminCategories();
+            renderAdminSlides();
+            document.getElementById('adminModal').classList.remove('hidden');
+        }
+
+        function closeAdminModal() {
+            document.getElementById('adminModal').classList.add('hidden');
+        }
+
+        function switchAdminTab(tabName) {
+            ['profiles', 'categories', 'slides'].forEach(t => {
+                document.getElementById(`adminTab${t.charAt(0).toUpperCase() + t.slice(1)}`).classList.add('hidden');
+                const btn = document.getElementById(`tabBtn${t.charAt(0).toUpperCase() + t.slice(1)}`);
+                btn.classList.remove('bg-kandyMaroon', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-700');
+            });
+
+            document.getElementById(`adminTab${tabName.charAt(0).toUpperCase() + tabName.slice(1)}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`tabBtn${tabName.charAt(0).toUpperCase() + tabName.slice(1)}`);
+            activeBtn.classList.remove('bg-white', 'text-slate-700');
+            activeBtn.classList.add('bg-kandyMaroon', 'text-white');
+        }
+
+        function renderAdminList() {
+            const container = document.getElementById('adminProvidersList');
+            container.innerHTML = providers.map(p => `
+                <div class="p-4 rounded-2xl border bg-slate-50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <img src="${p.mainPhoto}" class="w-12 h-12 rounded-xl object-cover border">
+                        <div>
+                            <h5 class="font-bold text-sm text-kandyDark">${p.name}</h5>
+                            <p class="text-xs text-slate-500">${p.category} &bull; ${p.district} (${p.divSec})</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 self-end sm:self-auto">
+                        <button onclick="openEditModal(${p.id})" class="px-3.5 py-1.5 bg-kandyGold text-kandyRoyal font-bold text-xs rounded-xl hover:bg-amber-400 cursor-pointer">Edit Profile</button>
+                        <button onclick="deleteProvider(${p.id})" class="px-3.5 py-1.5 bg-red-600 text-white font-bold text-xs rounded-xl hover:bg-red-700 cursor-pointer">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Admin Category Management
+        function renderAdminCategories() {
+            const container = document.getElementById('adminCategoriesList');
+            container.innerHTML = Object.keys(categoriesData).map(cat => `
+                <div class="p-4 rounded-2xl border bg-slate-50">
+                    <div class="flex items-center justify-between mb-2 pb-2 border-b">
+                        <span class="font-extrabold text-sm text-kandyMaroon">${cat}</span>
+                        <button onclick="adminDeleteCategory('${cat}')" class="text-xs text-red-600 font-bold hover:underline cursor-pointer">Delete Category</button>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                        ${categoriesData[cat].map(sub => `
+                            <span class="px-2.5 py-1 bg-white border rounded-lg text-xs text-slate-700 flex items-center gap-1.5">
+                                <span>${sub}</span>
+                                <button onclick="adminDeleteSubCategory('${cat}', '${sub}')" class="text-red-500 font-bold hover:text-red-700 cursor-pointer">&times;</button>
+                            </span>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function adminAddCategory() {
+            const cat = document.getElementById('adminNewCatName').value.trim();
+            const sub = document.getElementById('adminNewSubCatName').value.trim();
+            if (!cat) {
+                showToast("Please enter a category name.");
+                return;
+            }
+            if (!categoriesData[cat]) {
+                categoriesData[cat] = [];
+            }
+            if (sub && !categoriesData[cat].includes(sub)) {
+                categoriesData[cat].push(sub);
+            }
+            document.getElementById('adminNewCatName').value = '';
+            document.getElementById('adminNewSubCatName').value = '';
+            populateCategoryDropdowns();
+            renderAdminCategories();
+            showToast("Category structure updated!");
+        }
+
+        function adminDeleteCategory(cat) {
+            delete categoriesData[cat];
+            populateCategoryDropdowns();
+            renderAdminCategories();
+            showToast("Category removed.");
+        }
+
+        function adminDeleteSubCategory(cat, sub) {
+            categoriesData[cat] = categoriesData[cat].filter(s => s !== sub);
+            populateCategoryDropdowns();
+            renderAdminCategories();
+            showToast("Sub-category removed.");
+        }
+
+        // Admin Hero Slides Management
+        function handleSlideImageUpload(inputElement) {
+            const file = inputElement.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('slideImageBase64').value = e.target.result;
+                    showToast("Banner image loaded!");
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function adminAddSlide() {
+            const title = document.getElementById('slideTitleInput').value.trim();
+            const subtitle = document.getElementById('slideSubtitleInput').value.trim();
+            const img = document.getElementById('slideImageBase64').value;
+            if (!title || !img) {
+                showToast("Please provide both slide headline and image.");
+                return;
+            }
+            heroSlides.push({ title, subtitle, image: img });
+            document.getElementById('slideTitleInput').value = '';
+            document.getElementById('slideSubtitleInput').value = '';
+            document.getElementById('slideImageBase64').value = '';
+            currentSlideIndex = heroSlides.length - 1;
+            renderHeroSlider();
+            renderAdminSlides();
+            showToast("New hero slide published!");
+        }
+
+        function renderAdminSlides() {
+            const container = document.getElementById('adminSlidesList');
+            container.innerHTML = heroSlides.map((s, idx) => `
+                <div class="rounded-2xl border overflow-hidden bg-slate-50">
+                    <img src="${s.image}" class="w-full h-32 object-cover">
+                    <div class="p-3 flex items-center justify-between gap-2">
+                        <div>
+                            <h5 class="font-bold text-xs text-slate-800">${s.title}</h5>
+                            <p class="text-[11px] text-slate-500 line-clamp-1">${s.subtitle}</p>
+                        </div>
+                        ${heroSlides.length > 1 ? `<button onclick="adminDeleteSlide(${idx})" class="px-2.5 py-1 bg-red-600 text-white text-xs font-bold rounded-lg cursor-pointer">Remove</button>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function adminDeleteSlide(index) {
+            heroSlides.splice(index, 1);
+            currentSlideIndex = 0;
+            renderHeroSlider();
+            renderAdminSlides();
+            showToast("Slide removed.");
+        }
+
+        // =========================================================
+        // EDIT & DELETE PROVIDER (ADMIN)
+        // =========================================================
+        function openEditModal(id) {
+            const item = providers.find(p => p.id === id);
+            if (!item) return;
+            populateCategoryDropdowns();
+            document.getElementById('editId').value = item.id;
+            document.getElementById('editName').value = item.name;
+            document.getElementById('editCategory').value = item.category;
+            updateSubCategoryDropdown('editCategory', 'editSubCategory');
+            document.getElementById('editSubCategory').value = item.subCategory;
+            document.getElementById('editProfession').value = item.profession;
+            document.getElementById('editDistrict').value = item.district;
+            document.getElementById('editDivSec').value = item.divSec || '';
+            document.getElementById('editGnDiv').value = item.gnDivision || '';
+            document.getElementById('editPhone').value = item.phone;
+            document.getElementById('editWhatsapp').value = item.whatsapp || '';
+            document.getElementById('editEmail').value = item.email || '';
+            document.getElementById('editYoutube').value = item.youtube || '';
+            document.getElementById('editSocial').value = item.socialLink || '';
+
+            if (item.videoUrl && item.videoUrl.startsWith('data:video/')) {
+                document.getElementById('editVideoBase64').value = item.videoUrl;
+                document.getElementById('editVideoUrl').value = '';
+            } else {
+                document.getElementById('editVideoUrl').value = item.videoUrl || '';
+                document.getElementById('editVideoBase64').value = '';
+            }
+
+            document.getElementById('editHidePhone').checked = !!item.hidePhone;
+            document.getElementById('editPaymentPref').value = item.paymentPref;
+            document.getElementById('editDescription').value = item.description;
+            document.getElementById('editMainPhotoBase64').value = item.mainPhoto || '';
+            if (item.mainPhoto) {
+                document.getElementById('editMainPhotoPreview').querySelector('img').src = item.mainPhoto;
+            }
+            tempEditSubPhotos = item.subPhotos ? [...item.subPhotos] : ["", "", "", ""];
+            document.getElementById('adminModal').classList.add('hidden');
+            document.getElementById('editModal').classList.remove('hidden');
+        }
+
+        function closeEditModal() {
+            document.getElementById('editModal').classList.add('hidden');
+        }
+
+        function handleSaveEditedProvider(event) {
+            event.preventDefault();
+            const id = Number(document.getElementById('editId').value);
+            const index = providers.findIndex(p => p.id === id);
+            if (index !== -1) {
+                const finalVideoSource = document.getElementById('editVideoBase64').value || document.getElementById('editVideoUrl').value.trim();
+
+                providers[index].name = document.getElementById('editName').value;
+                providers[index].category = document.getElementById('editCategory').value;
+                providers[index].subCategory = document.getElementById('editSubCategory').value;
+                providers[index].profession = document.getElementById('editProfession').value;
+                providers[index].district = document.getElementById('editDistrict').value;
+                providers[index].divSec = document.getElementById('editDivSec').value;
+                providers[index].gnDivision = document.getElementById('editGnDiv').value;
+                providers[index].phone = document.getElementById('editPhone').value;
+                providers[index].whatsapp = document.getElementById('editWhatsapp').value.trim();
+                providers[index].email = document.getElementById('editEmail').value.trim();
+                providers[index].youtube = document.getElementById('editYoutube').value.trim();
+                providers[index].socialLink = document.getElementById('editSocial').value.trim();
+                providers[index].videoUrl = finalVideoSource;
+                providers[index].hidePhone = document.getElementById('editHidePhone').checked;
+                providers[index].paymentPref = document.getElementById('editPaymentPref').value;
+                providers[index].description = document.getElementById('editDescription').value;
+                providers[index].mainPhoto = document.getElementById('editMainPhotoBase64').value || providers[index].mainPhoto;
+                providers[index].subPhotos = tempEditSubPhotos.filter(p => p !== "");
+
+                filterProviders();
+                closeEditModal();
+                showToast("Profile updated successfully!");
+            }
+        }
+
+        function deleteProvider(id) {
+            providers = providers.filter(p => p.id !== id);
+            filterProviders();
+            renderAdminList();
+            showToast("Profile deleted.");
+        }
+
+        // =========================================================
+        // TOAST NOTIFICATION & INITIALIZATION
+        // =========================================================
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').textContent = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3200);
+        }
+
+        window.onload = function() {
+            renderHeroSlider();
+            populateCategoryDropdowns();
+            filterProviders();
+        };
+    </script>
+</body>
+</html>
